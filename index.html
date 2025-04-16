@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alberto Martín | Full Stack Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="/assets/images/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="grid-lines">
+        <div class="line vertical"></div>
+        <div class="line horizontal"></div>
+    </div>
+    
+    <div class="cursor-follower"></div>
+    
+    <header class="header">
+        <div class="logo">
+            <span class="logo-bracket">{</span>
+            <span class="logo-text">Alberto Martín</span>
+            <span class="logo-bracket">}</span>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#about" class="nav-link">Sobre mí</a></li>
+                <li><a href="#skills" class="nav-link">Habilidades</a></li>
+                <li><a href="#projects" class="nav-link">Proyectos</a></li>
+                <li><a href="#contact" class="nav-link">Contacto</a></li>
+                <li><a href="html/visualizer.html" class="nav-link">Curriculum</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">
+            <div class="hamburger"></div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-line">Hola, soy</span>
+                    <span class="title-name">[Alberto Martín]</span>
+                    <span class="title-role">Desarrollador Full Stack</span>
+                </h1>
+                <p class="hero-subtitle">Creando soluciones digitales con código limpio y diseño intuitivo.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary pulse">Ver proyectos</a>
+                    <a href="#contact" class="btn btn-secondary">Contactarme</a>
+                </div>
+            </div>
+            <div class="hero-code">
+                <div class="code-window">
+                    <div class="code-header">
+                        <div class="code-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="code-title">portfolio.js</div>
+                    </div>
+                    <div class="code-content">
+                        <pre><code class="javascript">// Mi pasión por el código
+function createSolutions() {
+  const creativity = new Innovation();
+  const problems = document.querySelectorAll('.challenges');
+  
+  problems.forEach(problem => {
+    const solution = creativity.solve(problem);
+    problem.addEventListener('resolve', () => {
+      console.log(`Solución implementada: ${solution}`);
+    });
+  });
+}
+
+// Conectemos y construyamos algo increíble
+const contactForm = new FormData();
+contactForm.append('message', 'Hola, me encantaría colaborar contigo!');
+
+fetch('mailto:tu@email.com', {
+  method: 'POST',
+  body: contactForm
+}).then(response => {
+  if (response.ok) {
+    startAwesomeProject();
+  }
+});</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section about">
+            <div class="section-header">
+                <h2><span class="section-number">01</span> Sobre mí</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Soy un desarrollador full stack apasionado por crear aplicaciones web eficientes, escalables y con una experiencia de usuario excepcional.</p>
+                    <p>Con más de [X] años de experiencia en el desarrollo web, he trabajado con diversas tecnologías tanto en el frontend como en el backend, siempre buscando aprender y aplicar las mejores prácticas.</p>
+                    <p>Cuando no estoy codificando, me gusta contribuir a proyectos open source, aprender nuevas tecnologías y compartir conocimiento con la comunidad.</p>
+                    <div class="about-buttons">
+                        <a href="cv-visualizer/visualizer.html" class="btn btn-outline download-cv">
+                            <i class="fas fa-download"></i> Descargar CV
+                            <span class="hover-effect"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-container">
+                        <div class="image-border"></div>
+                        <img src="assets/images/DSC_0008 copia.jpg" alt="Foto de perfil" class="profile-img">
+                        <div class="image-tech-icons">
+                            <i class="devicon-java-plain colored"></i>
+                            <i class="devicon-docker-plain colored"></i>
+                            <i class="devicon-flutter-plain colored"></i>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jetpackcompose/jetpackcompose-original.svg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section skills">
+            <div class="section-header">
+                <h2><span class="section-number">02</span> Habilidades</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-container">
+                <div class="skills-frontend">
+                    <h3 class="skills-title">Frontend</h3>
+                    <div class="skills-icons">
+                        <div class="skill-icon" title="JavaScript">
+                            <i class="devicon-javascript-plain colored"></i>
+                            <span class="skill-name">JavaScript</span>
+                        </div>
+                       
+                        <div class="skill-icon" title="HTML5">
+                            <i class="devicon-html5-plain colored"></i>
+                            <span class="skill-name">HTML5</span>
+                        </div>
+                        <div class="skill-icon" title="CSS3">
+                            <i class="devicon-css3-plain colored"></i>
+                            <span class="skill-name">CSS3</span>
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="skills-backend">
+                    <h3 class="skills-title">Backend</h3>
+                    <div class="skills-icons">
+                        <div class="skill-icon" title="Java">
+                            <i class="devicon-java-plain colored"></i>
+                            <span class="skill-name">Java</span>
+                        </div>
+                        <div class="skill-icon" title="Kotlin">
+                            <i class="devicon-kotlin-plain colored"></i>
+                            <span class="skill-name">Kotlin</span>
+                        </div>
+                        <div class="skill-icon" title="Database">
+                            <i class="devicon-mysql-plain-wordmark colored"></i>
+                            <span class="skill-name">SQL</span>
+                        </div>
+                        <div class="skill-icon" title="Dart">
+                            <i class="devicon-dart-plain colored"></i>
+                            <span class="skill-name">Dart</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-backend">
+                    <h3 class="skills-title">FrameWorks</h3>
+                    <div class="skills-icons">
+                        <div class="skill-icon" title="Jetpack Compose">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jetpackcompose/jetpackcompose-original.svg" />
+                            <span class="skill-name">Jetpack Compose</span>
+                        </div>
+                        <div class="skill-icon" title="Flutter">
+                            <i class="devicon-flutter-plain colored"></i>
+                            <span class="skill-name">Flutter</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-so">
+                    <h3 class="skills-title">SO</h3>
+                    <div class="skills-icons">
+                        <div class="skill-icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/archlinux/archlinux-original.svg" />
+                            <span class="skill-name">Arch-Linux</span>
+                        </div>
+                        <div class="skill-icon">
+                            <i class="devicon-linux-plain"></i>
+                            <span class="skill-name">Linux</span>
+                        </div>
+                        <div class="skill-icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/windows11/windows11-original.svg" />
+                            <span class="skill-name">Windows</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-other">
+                <h3 class="skills-title">Otras tecnologías</h3>
+                <div class="tech-tags">
+                    <span class="tech-tag">Git</span>
+                    <span class="tech-tag">Docker</span>
+                    <span class="tech-tag">AWS</span>
+                    <span class="tech-tag">GraphQL</span>
+                    <span class="tech-tag">MongoDB</span>
+                    <span class="tech-tag">REST APIs</span>
+                    <span class="tech-tag">SASS</span>
+                    <span class="tech-tag">Webpack</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section projects">
+            <div class="section-header">
+                <h2><span class="section-number">03</span> Proyectos</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400" alt="Proyecto 1">
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">E-commerce Platform</h3>
+                        <p class="project-description">Plataforma de comercio electrónico completa con carrito de compras, autenticación de usuarios y pasarela de pago.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>Stripe API</span>
+                        </div>
+                        <a href="./html/project-details.html?id=1" class="btn btn-outline project-more-btn">
+                            Ver más detalles
+                            <span class="hover-effect"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400" alt="Proyecto 2">
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">E-commerce Platform</h3>
+                        <p class="project-description">Plataforma de comercio electrónico completa con carrito de compras, autenticación de usuarios y pasarela de pago.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>Stripe API</span>
+                        </div>
+                        <a href="./html/project-details.html?id=2" class="btn btn-outline project-more-btn">
+                            Ver más detalles
+                            <span class="hover-effect"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400" alt="Proyecto 3">
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Social Network API</h3>
+                        <p class="project-description">API RESTful para red social con autenticación JWT, relaciones de usuarios y sistema de publicaciones.</p>
+                        <div class="project-tech">
+                            <span>Express</span>
+                            <span>MongoDB</span>
+                            <span>JWT</span>
+                            <span>Socket.io</span>
+                        </div>
+                        <a href="./html/project-details.html?id=3" class="btn btn-outline project-more-btn">
+                            Ver más detalles
+                            <span class="hover-effect"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400" alt="Proyecto 1">
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">E-commerce Platform</h3>
+                        <p class="project-description">Plataforma de comercio electrónico completa con carrito de compras, autenticación de usuarios y pasarela de pago.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>Stripe API</span>
+                        </div>
+                        <a href="./html/project-details.html?id=4" class="btn btn-outline project-more-btn">
+                            Ver más detalles
+                            <span class="hover-effect"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="projects-more">
+                <button id="load-more-projects" class="btn btn-outline">
+                    Ver más proyectos 
+                    <i class="fas fa-arrow-down"></i>
+                    <span class="hover-effect"></span>
+                </button>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact">
+            <div class="section-header">
+                <h2><span class="section-number">04</span> Contacto</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 class="contact-title">¿Listo para comenzar tu proyecto?</h3>
+                    <p class="contact-text">Estoy disponible para oportunidades freelance y colaboraciones. Contáctame y hablemos sobre cómo puedo ayudarte a hacer realidad tu idea.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>alberto.martinmorin.job@gmail.com </span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>662119609</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>La Laguna, España</span>
+                        </div>
+                    </div>
+                    <div class="contact-social">
+                        <a href="https://github.com/Alberto02003" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/alberto-martin-morin-b5aa7830a/" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" required>
+                        <label for="name">Nombre</label>
+                        <div class="form-line"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" required>
+                        <label for="email">Email</label>
+                        <div class="form-line"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" required>
+                        <label for="subject">Asunto</label>
+                        <div class="form-line"></div>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="4" required></textarea>
+                        <label for="message">Mensaje</label>
+                        <div class="form-line"></div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        Enviar mensaje
+                        <i class="fas fa-paper-plane"></i>
+                        <span class="hover-effect"></span>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="logo-bracket">{</span>
+                <span class="logo-text">Alberto Martín</span>
+                <span class="logo-bracket">}</span>
+            </div>
+            <div class="footer-links">
+                <a href="#about">Sobre mí</a>
+                <a href="#skills">Habilidades</a>
+                <a href="#projects">Proyectos</a>
+                <a href="#contact">Contacto</a>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; <span id="year"></span> Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

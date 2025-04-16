@@ -1,0 +1,131 @@
+.project-detail {
+    background-color: var(--medium-blue);
+    border-radius: 8px;
+    padding: 2rem;
+    margin-top: 2rem;
+    box-shadow: var(--shadow);
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.project-title {
+    font-size: 2rem;
+    color: var(--text-accent);
+    margin-bottom: 0.5rem;
+}
+
+.project-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+.project-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+}
+
+.project-main img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.project-section {
+    margin-bottom: 2rem;
+}
+
+.project-section h3 {
+    color: var(--text-accent);
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.project-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--accent-blue);
+}
+
+.project-section p, .project-section ul {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.project-section ul {
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+}
+
+.project-tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.project-tech-item {
+    background-color: rgba(100, 255, 218, 0.1);
+    color: var(--accent-blue);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.project-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-accent);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.project-link:hover {
+    color: var(--accent-blue);
+}
+
+.back-projects {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    margin: 2rem auto 0;
+    width: calc(100% - 4rem); /* Igual que el padding de project-detail */
+    max-width: calc(1200px - 4rem); /* Igual que el max-width de project-detail */
+}
+
+@media (max-width: 768px) {
+    .back-projects {
+        width: calc(100% - 2rem);
+        margin: 1.5rem auto 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
