@@ -353,24 +353,26 @@ fetch('mailto:tu@email.com', {
                         <a href="https://www.linkedin.com/in/alberto-martin-morin-b5aa7830a/" class="social-link"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                <form class="contact-form">
+                <form name="contact" method="POST" data-netlify="true" class="contact-form">
+                    <input type="hidden" name="form-name" value="contact">
+                    
                     <div class="form-group">
-                        <input type="text" id="name" required>
+                        <input type="text" id="name" name="name" required>
                         <label for="name">Nombre</label>
                         <div class="form-line"></div>
                     </div>
                     <div class="form-group">
-                        <input type="email" id="email" required>
+                        <input type="email" id="email" name="email" required>
                         <label for="email">Email</label>
                         <div class="form-line"></div>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="subject" required>
+                        <input type="text" id="subject" name="subject" required>
                         <label for="subject">Asunto</label>
                         <div class="form-line"></div>
                     </div>
                     <div class="form-group">
-                        <textarea id="message" rows="4" required></textarea>
+                        <textarea id="message" name="message" rows="4" required></textarea>
                         <label for="message">Mensaje</label>
                         <div class="form-line"></div>
                     </div>
