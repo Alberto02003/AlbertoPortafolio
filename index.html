@@ -56,42 +56,44 @@
                     <a href="#contact" class="btn btn-secondary">Contactarme</a>
                 </div>
             </div>
-            <div class="hero-code">
-                <div class="code-window">
-                    <div class="code-header">
-                        <div class="code-dots">
-                            <span class="dot red"></span>
-                            <span class="dot yellow"></span>
-                            <span class="dot green"></span>
+            <div class="hero-code-container">
+                <div class="hero-code">
+                    <div class="code-window">
+                        <div class="code-header">
+                            <div class="code-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <div class="code-title">portfolio.js</div>
                         </div>
-                        <div class="code-title">portfolio.js</div>
-                    </div>
-                    <div class="code-content">
-                        <pre><code class="javascript">// Mi pasión por el código
-function createSolutions() {
-  const creativity = new Innovation();
-  const problems = document.querySelectorAll('.challenges');
-  
-  problems.forEach(problem => {
-    const solution = creativity.solve(problem);
-    problem.addEventListener('resolve', () => {
-      console.log(`Solución implementada: ${solution}`);
-    });
-  });
-}
-
-// Conectemos y construyamos algo increíble
-const contactForm = new FormData();
-contactForm.append('message', 'Hola, me encantaría colaborar contigo!');
-
-fetch('mailto:tu@email.com', {
-  method: 'POST',
-  body: contactForm
-}).then(response => {
-  if (response.ok) {
-    startAwesomeProject();
-  }
-});</code></pre>
+                        <div class="code-content">
+                            <pre><code class="javascript">// Mi pasión por el código
+            function createSolutions() {
+              const creativity = new Innovation();
+              const problems = document.querySelectorAll('.challenges');
+              
+              problems.forEach(problem => {
+                const solution = creativity.solve(problem);
+                problem.addEventListener('resolve', () => {
+                  console.log(`Solución implementada: ${solution}`);
+                });
+              });
+            }
+            
+            // Conectemos y construyamos algo increíble
+            const contactForm = new FormData();
+            contactForm.append('message', 'Hola, me encantaría colaborar contigo!');
+            
+            fetch('mailto:tu@email.com', {
+              method: 'POST',
+              body: contactForm
+            }).then(response => {
+              if (response.ok) {
+                startAwesomeProject();
+              }
+            });</code></pre>
+                        </div>
                     </div>
                 </div>
             </div>

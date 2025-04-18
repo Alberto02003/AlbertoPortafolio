@@ -302,11 +302,21 @@ body {
     gap: 1.5rem;
 }
 
+/* Hero Code Container */
+.hero-code-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
 .hero-code {
     flex: 1;
     position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    max-width: 100%;
 }
 
 .code-window {
@@ -362,11 +372,13 @@ body {
 
 .code-content {
     padding: 1.5rem;
+    overflow-x: auto;
 }
 
 .code-content pre {
     margin: 0;
-    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }
 
 .code-content code {
@@ -374,6 +386,8 @@ body {
     font-size: 0.9rem;
     line-height: 1.5;
     color: var(--text-primary);
+    display: block;
+    overflow-x: auto;
 }
 
 .token.comment {
@@ -404,89 +418,6 @@ body {
 .token.number {
     color: #d19a66;
 }
-
-/* Experience section */
-.experience-timeline {
-    position: relative;
-    padding-left: 2rem;
-    margin-top: 2rem;
-}
-
-.experience-timeline::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 7px;
-    height: 100%;
-    width: 2px;
-    background-color: var(--accent-blue);
-}
-
-.timeline-item {
-    position: relative;
-    padding-bottom: 2.5rem;
-    padding-left: 2rem;
-}
-
-.timeline-item:last-child {
-    padding-bottom: 0;
-}
-
-.timeline-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -9px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: var(--accent-blue);
-    border: 3px solid var(--medium-blue);
-}
-
-.timeline-date {
-    color: var(--accent-blue);
-    font-weight: 500;
-    margin-bottom: 0.5rem;
-}
-
-.timeline-title {
-    font-size: 1.3rem;
-    color: var(--text-accent);
-    margin-bottom: 0.3rem;
-}
-
-.timeline-company {
-    color: var(--text-secondary);
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    font-weight: 500;
-}
-
-.timeline-description {
-    color: var(--text-secondary);
-    line-height: 1.6;
-    margin-bottom: 1rem;
-}
-
-.timeline-tech {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.8rem;
-}
-
-.timeline-tech span {
-    background-color: rgba(100, 255, 218, 0.1);
-    color: var(--accent-blue);
-    padding: 0.3rem 0.8rem;
-    border-radius: 4px;
-    font-size: 0.8rem;
-}
-
-/* Ajustar los números de sección */
-#skills .section-number { content: "03"; }
-#projects .section-number { content: "04"; }
-#contact .section-number { content: "05"; }
 
 /* Buttons */
 .btn {
@@ -677,6 +608,89 @@ body {
 .image-tech-icons i:hover, img:hover {
     transform: translateY(-10px);
 }
+
+/* Experience section */
+.experience-timeline {
+    position: relative;
+    padding-left: 2rem;
+    margin-top: 2rem;
+}
+
+.experience-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 7px;
+    height: 100%;
+    width: 2px;
+    background-color: var(--accent-blue);
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 2.5rem;
+    padding-left: 2rem;
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -9px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--accent-blue);
+    border: 3px solid var(--medium-blue);
+}
+
+.timeline-date {
+    color: var(--accent-blue);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-title {
+    font-size: 1.3rem;
+    color: var(--text-accent);
+    margin-bottom: 0.3rem;
+}
+
+.timeline-company {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.timeline-description {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.timeline-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.timeline-tech span {
+    background-color: rgba(100, 255, 218, 0.1);
+    color: var(--accent-blue);
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+/* Ajustar los números de sección */
+#skills .section-number { content: "03"; }
+#projects .section-number { content: "04"; }
+#contact .section-number { content: "05"; }
 
 /* Skills section */
 .skills-container {
@@ -1178,6 +1192,26 @@ body {
 }
 
 @media (max-width: 992px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+    
+    .hero-code {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+    
+    .code-window {
+        max-width: 100%;
+    }
+
     .skills-container {
         flex-wrap: wrap;
     }
@@ -1239,20 +1273,13 @@ body {
         display: flex;
     }
     
-    /* Hero */
-    .hero {
-        flex-direction: column;
-        padding-top: 80px;
-        text-align: center;
+    /* Code Window */
+    .code-content {
+        padding: 1rem;
     }
     
-    .hero-content {
-        padding-right: 0;
-        margin-bottom: 3rem;
-    }
-    
-    .hero-buttons {
-        justify-content: center;
+    .code-content code {
+        font-size: 0.8rem;
     }
     
     /* About */
@@ -1343,6 +1370,28 @@ body {
     
     .btn {
         width: 100%;
+    }
+    
+    /* Code Window */
+    .code-content {
+        padding: 0.8rem;
+    }
+    
+    .code-content code {
+        font-size: 0.75rem;
+    }
+    
+    .code-header {
+        padding: 0.6rem 0.8rem;
+    }
+    
+    .code-title {
+        font-size: 0.7rem;
+    }
+    
+    .dot {
+        width: 10px;
+        height: 10px;
     }
     
     /* Skills */
