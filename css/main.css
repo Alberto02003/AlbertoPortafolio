@@ -261,7 +261,6 @@ body {
     flex: 1.5;
     padding-right: 1rem;
     max-width: 60%; 
-    
 }
 
 .hero-title {
@@ -307,6 +306,7 @@ body {
 
 /* Hero Code Container */
 .hero-code-container {
+    text-align: left;
     min-width: 40%;
     overflow: hidden;
     position: relative;
@@ -1199,7 +1199,11 @@ body {
         flex-direction: column;
         text-align: center;
     }
-    
+
+    .hero-code-container{
+        text-align: left;
+    }
+
     .hero-content {
         padding-right: 0;
         margin-bottom: 2rem;
@@ -1281,6 +1285,10 @@ body {
     .code-content {
         padding: 1rem;
     }
+
+    .hero-code-container{
+        text-align: left;
+    }
     
     .code-content code {
         font-size: 0.8rem;
@@ -1357,6 +1365,10 @@ body {
     /* Hero */
     .hero {
         padding-top: 70px;
+    }
+
+    .hero-code-container{
+        text-align: left;
     }
     
     .title-name {
