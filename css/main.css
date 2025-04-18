@@ -1306,4 +1306,10 @@ img {
     .hero-code {
       display: none;
     }
+  
+    .hero-content {
+      flex: 1 1 100%;
+      width: 100%;
+    }
   }
+  
