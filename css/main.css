@@ -19,6 +19,7 @@
 
 html {
     scroll-behavior: smooth;
+    font-size: 16px;
 }
 
 body {
@@ -121,6 +122,10 @@ body {
     font-weight: 500;
     position: relative;
     transition: var(--transition);
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
 }
 
 .nav-link::after {
@@ -145,10 +150,16 @@ body {
 .menu-toggle {
     display: none;
     width: 30px;
-    height: 20px;
+    height: 24px;
     position: relative;
     cursor: pointer;
     z-index: 1001;
+    background: none;
+    border: none;
+    min-width: 44px;
+    min-height: 44px;
+    justify-content: center;
+    align-items: center;
 }
 
 .hamburger {
@@ -191,7 +202,7 @@ body {
     top: 0;
 }
 
-/* Animación para los nuevos proyectos */
+/* Animations */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -207,6 +218,25 @@ body {
     animation: fadeInUp 0.6s ease forwards;
 }
 
+.project-card {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeOutDown {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+.fade-out {
+    animation: fadeOutDown 0.6s ease forwards;
+}
+
 .projects-more {
     margin-top: 2rem;
     text-align: center;
@@ -214,6 +244,7 @@ body {
 
 #load-more-projects {
     margin: 0 auto;
+    transition: var(--transition);
 }
 
 /* Hero section */
@@ -389,6 +420,8 @@ body {
     overflow: hidden;
     border: none;
     cursor: pointer;
+    min-width: 44px;
+    min-height: 44px;
 }
 
 .btn-primary {
@@ -529,8 +562,6 @@ body {
     filter: none;
 }
 
-
-
 .image-tech-icons {
     position: absolute;
     bottom: -70px;
@@ -540,10 +571,12 @@ body {
     justify-content: space-around;
 }
 
-.image-tech-icons img{
+.image-tech-icons img {
     width: 55px;
     font-size: 2.5rem;
     padding: 0.5rem;
+    background-color: var(--medium-blue);
+    border-radius: 50%;
     box-shadow: var(--shadow);
     transition: var(--transition);
 }
@@ -558,7 +591,7 @@ body {
     transition: var(--transition);
 }
 
-.image-tech-icons i:hover , img:hover {
+.image-tech-icons i:hover, img:hover {
     transform: translateY(-10px);
 }
 
@@ -575,7 +608,6 @@ body {
 .skills-framework {
     flex: 1;
 }
-
 
 .skills-title {
     font-size: 1.3rem;
@@ -601,8 +633,10 @@ body {
     gap: 1.5rem;
 }
 
-.skill-icon img{
-     width: 50px;
+.skill-icon img {
+    width: 50px;
+    max-width: 100%;
+    height: auto;
 }
 
 .skill-icon {
@@ -658,8 +692,6 @@ body {
     text-align: center;
 }
 
-
-
 .tech-tags {
     display: flex;
     flex-wrap: wrap;
@@ -683,8 +715,8 @@ body {
 /* Projects section */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
     margin-bottom: 3rem;
 }
 
@@ -741,6 +773,11 @@ body {
     color: var(--text-accent);
     font-size: 1.5rem;
     transition: var(--transition);
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .project-link:hover {
@@ -838,6 +875,11 @@ body {
     color: var(--text-accent);
     font-size: 1.3rem;
     transition: var(--transition);
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .social-link:hover {
@@ -945,6 +987,11 @@ body {
     color: var(--text-accent);
     text-decoration: none;
     transition: var(--transition);
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer-links a:hover {
@@ -984,100 +1031,6 @@ body {
     animation-delay: 0.6s;
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
-    .hero {
-        flex-direction: column;
-        padding-top: 100px;
-    }
-    
-    .hero-content {
-        padding-right: 0;
-        margin-bottom: 3rem;
-        text-align: center;
-    }
-    
-    .hero-buttons {
-        justify-content: center;
-    }
-    
-    .about-content {
-        flex-direction: column;
-    }
-    
-    .skills-container {
-        flex-direction: column;
-    }
-    
-    .contact-content {
-        flex-direction: column;
-    }
-}
-
-@media (max-width: 768px) {
-    .nav {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 70%;
-        height: 100vh;
-        background-color: var(--medium-blue);
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        transition: var(--transition);
-        z-index: 1000;
-    }
-    
-    .nav.active {
-        right: 0;
-    }
-    
-    .nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .nav-link {
-        margin: 1rem 0;
-        font-size: 1.2rem;
-    }
-    
-    .menu-toggle {
-        display: block;
-    }
-    
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .section-header h2 {
-        font-size: 1.5rem;
-    }
-    
-    .section-line {
-        max-width: 200px;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-buttons {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    
-    .btn {
-        width: 100%;
-    }
-    
-    .section-line {
-        max-width: 100px;
-    }
-    
-    .skills-icons {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 /* PDF viewer specific styles */
 .pdf-container {
     background-color: var(--medium-blue);
@@ -1109,6 +1062,8 @@ body {
     color: var(--accent-blue);
     text-decoration: none;
     transition: var(--transition);
+    min-width: 44px;
+    min-height: 44px;
 }
 
 .pdf-download:hover {
@@ -1127,20 +1082,222 @@ body {
     margin-bottom: 1.5rem;
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .hero-content, 
+    .about-content, 
+    .contact-content {
+        padding: 0 3%;
+    }
+}
+
+@media (max-width: 992px) {
+    .skills-container {
+        flex-wrap: wrap;
+    }
+    
+    .skills-frontend,
+    .skills-backend,
+    .skills-so,
+    .skills-framework {
+        flex: 1 1 45%;
+        margin-bottom: 2rem;
+    }
 }
 
 @media (max-width: 768px) {
-    .pdf-container {
-        padding: 1rem;
+    html {
+        font-size: 14px;
     }
 
+    /* Header */
+    .header {
+        padding: 1rem 3%;
+    }
+    
+    .logo {
+        font-size: 1.3rem;
+    }
+    
+    /* Navigation */
+    .nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        background-color: var(--medium-blue);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: var(--transition);
+        z-index: 1000;
+        padding: 2rem;
+    }
+    
+    .nav.active {
+        right: 0;
+    }
+    
+    .nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav-link {
+        margin: 1.2rem 0;
+        font-size: 1.1rem;
+    }
+    
+    .menu-toggle {
+        display: flex;
+    }
+    
+    /* Hero */
+    .hero {
+        flex-direction: column;
+        padding-top: 80px;
+        text-align: center;
+    }
+    
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 3rem;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    /* About */
+    .about-content {
+        flex-direction: column;
+    }
+    
+    .about-image {
+        order: -1;
+        margin-bottom: 3rem;
+    }
+    
+    /* Skills */
+    .skills-container {
+        flex-direction: column;
+    }
+    
+    /* Projects */
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Contact */
+    .contact-content {
+        flex-direction: column;
+    }
+    
+    .contact-form {
+        margin-top: 2rem;
+    }
+    
+    /* Footer */
+    .footer-links {
+        flex-wrap: wrap;
+    }
+
+    /* PDF Viewer */
     .pdf-viewer {
-        height: 60vh;
+        height: 70vh;
     }
-
+    
     .pdf-toolbar {
         flex-direction: column;
         align-items: flex-start;
         gap: 1rem;
     }
+}
+
+@media (max-width: 576px) {
+    /* General */
+    .section {
+        padding: 4rem 3%;
+    }
+    
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .section-header h2 {
+        font-size: 1.5rem;
+        white-space: normal;
+    }
+    
+    .section-line {
+        margin-left: 0;
+        margin-top: 1rem;
+        width: 100%;
+    }
+    
+    /* Hero */
+    .hero {
+        padding-top: 70px;
+    }
+    
+    .title-name {
+        font-size: 2.2rem;
+    }
+    
+    .title-role {
+        font-size: 1.3rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+    
+    /* Skills */
+    .skills-icons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Contact */
+    .contact-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .contact-item i {
+        margin-bottom: 0.5rem;
+    }
+    
+    /* Footer */
+    .footer-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 400px) {
+    /* Projects */
+    .project-tech {
+        flex-direction: column;
+    }
+    
+    /* Skills */
+    .skill-icon {
+        padding: 1rem;
+    }
+}
+
+/* Images responsive */
+img {
+    max-width: 100%;
+    height: auto;
 }

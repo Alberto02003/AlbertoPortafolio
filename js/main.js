@@ -92,34 +92,8 @@ document.addEventListener('DOMContentLoaded', function() {
             `hsl(${parseInt(newPrimaryColor.split(',')[0].split('(')[1])}, 100%, 60%)`);
     }
     
-    // Cambiar colores cada 10 segundos (opcional)
-    // setInterval(updateButtonColors, 10000);
-    
     // Año actual en el footer
     document.getElementById('year').textContent = new Date().getFullYear();
-    
-    // Efecto de máquina de escribir en el hero
-    const heroTitle = document.querySelector('.hero-title');
-    const heroSubtitle = document.querySelector('.hero-subtitle');
-    
-    function typeWriter(element, text, speed) {
-        let i = 0;
-        element.textContent = '';
-        
-        function typing() {
-            if (i < text.length) {
-                element.textContent += text.charAt(i);
-                i++;
-                setTimeout(typing, speed);
-            }
-        }
-        
-        typing();
-    }
-    
-    // Descomenta para activar el efecto de máquina de escribir
-    // typeWriter(heroTitle, heroTitle.textContent, 100);
-    // typeWriter(heroSubtitle, heroSubtitle.textContent, 50);
     
     // Smooth scroll para los enlaces
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -144,50 +118,59 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.classList.add('loaded');
     }, 500);
 
-    // Lógica para "Ver más proyectos"
+    // Código corregido para "Ver más proyectos"
     const loadMoreBtn = document.getElementById('load-more-projects');
     const projectsGrid = document.querySelector('.projects-grid');
-    
+
     // Datos de proyectos adicionales
     const moreProjects = [
         {
             id: 5,
             title: "Weather Dashboard",
-            description: "Aplicación meteorológica con pronósticos en tiempo real y alertas personalizadas.",
-            tech: ["React", "OpenWeather API", "Chart.js", "Geolocation API"],
-            image: "https://via.placeholder.com/600x400/0a192f/64ffda?text=Weather+Dashboard"
+            description: "Aplicación meteorológica con pronósticos en tiempo real.",
+            tech: ["React", "API", "Chart.js"],
+            image: "https://via.placeholder.com/600x400"
         },
         {
             id: 6,
             title: "Recipe Finder",
-            description: "Buscador de recetas con filtros por ingredientes, tiempo de preparación y tipo de dieta.",
-            tech: ["Vue.js", "Spoonacular API", "Firebase", "IndexedDB"],
-            image: "https://via.placeholder.com/600x400/172a45/64ffda?text=Recipe+Finder"
+            description: "Buscador de recetas con filtros avanzados.",
+            tech: ["Vue.js", "Firebase"],
+            image: "https://via.placeholder.com/600x400"
         },
         {
             id: 7,
-            title: "Fitness Tracker",
-            description: "Sistema de seguimiento de ejercicios con estadísticas y progreso visual.",
-            tech: ["React Native", "Firebase", "Google Fit API", "D3.js"],
-            image: "https://via.placeholder.com/600x400/303f60/64ffda?text=Fitness+Tracker"
+            title: "Task Manager",
+            description: "Gestor de tareas con arrastrar y soltar.",
+            tech: ["React", "DnD", "Firebase"],
+            image: "https://via.placeholder.com/600x400"
         },
         {
             id: 8,
-            title: "Budget Manager",
-            description: "Aplicación de gestión financiera personal con análisis de gastos e ingresos.",
-            tech: ["Angular", "Node.js", "MongoDB", "Plaid API"],
-            image: "https://via.placeholder.com/600x400/0a192f/64ffda?text=Budget+Manager"
+            title: "Blog Platform",
+            description: "Plataforma de blogs con markdown.",
+            tech: ["Next.js", "Markdown", "MongoDB"],
+            image: "https://via.placeholder.com/600x400"
         }
     ];
 
     if (loadMoreBtn && projectsGrid) {
-        loadMoreBtn.addEventListener('click', () => {
-            // Cargar 4 proyectos más (o los que queden)
-            const projectsToLoad = moreProjects.splice(0, 4); // Elimina y obtiene los primeros 4 elementos
+        loadMoreBtn.addEventListener('click', function() {
+            // Verificar si hay proyectos para cargar
+            if (moreProjects.length === 0) {
+                loadMoreBtn.disabled = true;
+                loadMoreBtn.innerHTML = `No hay más proyectos <span class="hover-effect"></span>`;
+                return;
+            }
+
+            // Tomar los primeros 2 proyectos disponibles
+            const projectsToAdd = moreProjects.splice(0, 2);
             
-            projectsToLoad.forEach(project => {
+            projectsToAdd.forEach(project => {
                 const projectCard = document.createElement('div');
-                projectCard.className = 'project-card fade-in';
+                projectCard.className = 'project-card';
+                projectCard.style.opacity = '0'; // Inicialmente invisible
+                
                 projectCard.innerHTML = `
                     <div class="project-image">
                         <img src="${project.image}" alt="${project.title}">
@@ -210,29 +193,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 `;
                 
                 projectsGrid.appendChild(projectCard);
-            });
-
-            // Ocultar el botón si no hay más proyectos
-            if (moreProjects.length === 0) {
-                loadMoreBtn.style.display = 'none';
-            }
-
-            // Añadir efectos hover a las nuevas cards
-            const newCards = document.querySelectorAll('.project-card:not(.hover-initialized)');
-            newCards.forEach(card => {
-                card.classList.add('hover-initialized');
-                card.addEventListener('mouseenter', () => {
-                    cursorFollower.style.transform = 'translate(-50%, -50%) scale(2)';
-                    cursorFollower.style.backgroundColor = 'rgba(100, 255, 218, 0.1)';
-                    cursorFollower.style.border = '1px solid var(--accent-blue)';
-                });
                 
-                card.addEventListener('mouseleave', () => {
-                    cursorFollower.style.transform = 'translate(-50%, -50%) scale(1)';
-                    cursorFollower.style.backgroundColor = 'rgba(100, 255, 218, 0.3)';
-                    cursorFollower.style.border = 'none';
-                });
+                // Activar animación
+                setTimeout(() => {
+                    projectCard.style.opacity = '1';
+                    projectCard.classList.add('fade-in');
+                }, 10);
             });
+            
+            // Actualizar el estado del botón
+            if (moreProjects.length === 0) {
+                loadMoreBtn.disabled = true;
+                loadMoreBtn.innerHTML = `No hay más proyectos <span class="hover-effect"></span>`;
+            }
         });
     }
 });
