@@ -1301,3 +1301,9 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+@media (max-width: 768px) {
+    .hero-code {
+      display: none;
+    }
+  }
