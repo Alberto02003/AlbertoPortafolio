@@ -254,11 +254,14 @@ body {
     align-items: center;
     padding: 0 5%;
     padding-top: 80px;
+    gap: 2rem; 
 }
 
 .hero-content {
-    flex: 1;
-    padding-right: 2rem;
+    flex: 1.5;
+    padding-right: 1rem;
+    max-width: 60%; 
+    
 }
 
 .hero-title {
@@ -304,7 +307,7 @@ body {
 
 /* Hero Code Container */
 .hero-code-container {
-    width: 100%;
+    min-width: 40%;
     overflow: hidden;
     position: relative;
 }
@@ -1214,6 +1217,7 @@ body {
 
     .skills-container {
         flex-wrap: wrap;
+        width: 100%;
     }
     
     .skills-frontend,
