@@ -1,28 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alberto Martín | Full Stack Developer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" href="/assets/images/favicon.png" type="image/x-icon">
 </head>
-<body>
-    <div class="preloader">
-        <div class="preloader-spinner"></div>
-        <p>Cargando portfolio...</p>
-    </div>
 
+<body>
     <div class="grid-lines">
         <div class="line vertical"></div>
         <div class="line horizontal"></div>
     </div>
-    
+
     <div class="cursor-follower"></div>
-    
+
     <header class="header">
         <div class="logo">
             <span class="logo-bracket">{</span>
@@ -35,15 +33,13 @@
                 <li><a href="#skills" class="nav-link">Habilidades</a></li>
                 <li><a href="#projects" class="nav-link">Proyectos</a></li>
                 <li><a href="#contact" class="nav-link">Contacto</a></li>
+                <li><a href="#experience" class="nav-link">Experiencia</a></li>
                 <li><a href="html/visualizer.html" class="nav-link">Curriculum</a></li>
             </ul>
         </nav>
         <div class="menu-toggle">
             <div class="hamburger"></div>
         </div>
-        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-            <i class="fas fa-moon"></i>
-        </button>
     </header>
 
     <main>
@@ -60,42 +56,44 @@
                     <a href="#contact" class="btn btn-secondary">Contactarme</a>
                 </div>
             </div>
-            <div class="hero-code">
-                <div class="code-window">
-                    <div class="code-header">
-                        <div class="code-dots">
-                            <span class="dot red"></span>
-                            <span class="dot yellow"></span>
-                            <span class="dot green"></span>
+            <div class="hero-code-container">
+                <div class="hero-code">
+                    <div class="code-window">
+                        <div class="code-header">
+                            <div class="code-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <div class="code-title">portfolio.js</div>
                         </div>
-                        <div class="code-title">portfolio.js</div>
-                    </div>
-                    <div class="code-content">
-                        <pre><code class="javascript">// Mi pasión por el código
-function createSolutions() {
-  const creativity = new Innovation();
-  const problems = document.querySelectorAll('.challenges');
-  
-  problems.forEach(problem => {
-    const solution = creativity.solve(problem);
-    problem.addEventListener('resolve', () => {
-      console.log(`Solución implementada: ${solution}`);
-    });
-  });
-}
-
-// Conectemos y construyamos algo increíble
-const contactForm = new FormData();
-contactForm.append('message', 'Hola, me encantaría colaborar contigo!');
-
-fetch('mailto:tu@email.com', {
-  method: 'POST',
-  body: contactForm
-}).then(response => {
-  if (response.ok) {
-    startAwesomeProject();
-  }
-});</code></pre>
+                        <div class="code-content">
+                            <pre><code class="javascript">// Mi pasión por el código
+            function createSolutions() {
+              const creativity = new Innovation();
+              const problems = document.querySelectorAll('.challenges');
+              
+              problems.forEach(problem => {
+                const solution = creativity.solve(problem);
+                problem.addEventListener('resolve', () => {
+                  console.log(`Solución implementada: ${solution}`);
+                });
+              });
+            }
+            
+            // Conectemos y construyamos algo increíble
+            const contactForm = new FormData();
+            contactForm.append('message', 'Hola, me encantaría colaborar contigo!');
+            
+            fetch('mailto:tu@email.com', {
+              method: 'POST',
+              body: contactForm
+            }).then(response => {
+              if (response.ok) {
+                startAwesomeProject();
+              }
+            });</code></pre>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -108,9 +106,13 @@ fetch('mailto:tu@email.com', {
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Soy un desarrollador full stack apasionado por crear aplicaciones web eficientes, escalables y con una experiencia de usuario excepcional.</p>
-                    <p>Con más de [X] años de experiencia en el desarrollo web, he trabajado con diversas tecnologías tanto en el frontend como en el backend, siempre buscando aprender y aplicar las mejores prácticas.</p>
-                    <p>Cuando no estoy codificando, me gusta contribuir a proyectos open source, aprender nuevas tecnologías y compartir conocimiento con la comunidad.</p>
+                    <p>Soy un desarrollador full stack apasionado por crear aplicaciones web eficientes, escalables y
+                        con una experiencia de usuario excepcional.</p>
+                    <p>Con más de [X] años de experiencia en el desarrollo web, he trabajado con diversas tecnologías
+                        tanto en el frontend como en el backend, siempre buscando aprender y aplicar las mejores
+                        prácticas.</p>
+                    <p>Cuando no estoy codificando, me gusta contribuir a proyectos open source, aprender nuevas
+                        tecnologías y compartir conocimiento con la comunidad.</p>
                     <div class="about-buttons">
                         <a href="cv-visualizer/visualizer.html" class="btn btn-outline download-cv">
                             <i class="fas fa-download"></i> Descargar CV
@@ -126,7 +128,76 @@ fetch('mailto:tu@email.com', {
                             <i class="devicon-java-plain colored"></i>
                             <i class="devicon-docker-plain colored"></i>
                             <i class="devicon-flutter-plain colored"></i>
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jetpackcompose/jetpackcompose-original.svg" />
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jetpackcompose/jetpackcompose-original.svg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Añade esto después de la sección about y antes de skills -->
+        <section id="experience" class="section experience">
+            <div class="section-header">
+                <h2><span class="section-number">02</span> Experiencia Laboral</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="experience-timeline">
+                <!-- Experiencia 1 -->
+                <div class="timeline-item fade-in">
+                    <div class="timeline-date">2023 - Presente</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Desarrollador Full Stack</h3>
+                        <h4 class="timeline-company">Nombre de la Empresa</h4>
+                        <p class="timeline-description">
+                            Desarrollo y mantenimiento de aplicaciones web completas utilizando tecnologías como Java,
+                            Spring Boot, React y MySQL.
+                            Colaboración en equipos ágiles para implementar nuevas funcionalidades y optimizar el
+                            rendimiento.
+                        </p>
+                        <div class="timeline-tech">
+                            <span>Java</span>
+                            <span>Spring Boot</span>
+                            <span>React</span>
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experiencia 2 -->
+                <div class="timeline-item fade-in delay-1">
+                    <div class="timeline-date">2021 - 2023</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Desarrollador Frontend</h3>
+                        <h4 class="timeline-company">Otra Empresa</h4>
+                        <p class="timeline-description">
+                            Creación de interfaces de usuario responsive y accesibles utilizando HTML5, CSS3 y
+                            JavaScript.
+                            Implementación de diseños UX/UI y optimización del rendimiento frontend.
+                        </p>
+                        <div class="timeline-tech">
+                            <span>JavaScript</span>
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>React</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experiencia 3 -->
+                <div class="timeline-item fade-in delay-2">
+                    <div class="timeline-date">2020 - 2021</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Prácticas Desarrollo Web</h3>
+                        <h4 class="timeline-company">Empresa de Prácticas</h4>
+                        <p class="timeline-description">
+                            Desarrollo de componentes web y mantenimiento de sitios existentes.
+                            Participación en reuniones de equipo y aprendizaje de metodologías ágiles.
+                        </p>
+                        <div class="timeline-tech">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>PHP</span>
                         </div>
                     </div>
                 </div>
@@ -146,6 +217,7 @@ fetch('mailto:tu@email.com', {
                             <i class="devicon-javascript-plain colored"></i>
                             <span class="skill-name">JavaScript</span>
                         </div>
+
                         <div class="skill-icon" title="HTML5">
                             <i class="devicon-html5-plain colored"></i>
                             <span class="skill-name">HTML5</span>
@@ -154,6 +226,7 @@ fetch('mailto:tu@email.com', {
                             <i class="devicon-css3-plain colored"></i>
                             <span class="skill-name">CSS3</span>
                         </div>
+
                     </div>
                 </div>
                 <div class="skills-backend">
@@ -181,7 +254,8 @@ fetch('mailto:tu@email.com', {
                     <h3 class="skills-title">FrameWorks</h3>
                     <div class="skills-icons">
                         <div class="skill-icon" title="Jetpack Compose">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jetpackcompose/jetpackcompose-original.svg" />
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jetpackcompose/jetpackcompose-original.svg" />
                             <span class="skill-name">Jetpack Compose</span>
                         </div>
                         <div class="skill-icon" title="Flutter">
@@ -194,7 +268,8 @@ fetch('mailto:tu@email.com', {
                     <h3 class="skills-title">SO</h3>
                     <div class="skills-icons">
                         <div class="skill-icon">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/archlinux/archlinux-original.svg" />
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/archlinux/archlinux-original.svg" />
                             <span class="skill-name">Arch-Linux</span>
                         </div>
                         <div class="skill-icon">
@@ -202,7 +277,8 @@ fetch('mailto:tu@email.com', {
                             <span class="skill-name">Linux</span>
                         </div>
                         <div class="skill-icon">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/windows11/windows11-original.svg" />
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/windows11/windows11-original.svg" />
                             <span class="skill-name">Windows</span>
                         </div>
                     </div>
@@ -228,14 +304,8 @@ fetch('mailto:tu@email.com', {
                 <h2><span class="section-number">03</span> Proyectos</h2>
                 <div class="section-line"></div>
             </div>
-            <div class="projects-filter">
-                <button class="filter-btn active" data-filter="all">Todos</button>
-                <button class="filter-btn" data-filter="frontend">Frontend</button>
-                <button class="filter-btn" data-filter="backend">Backend</button>
-                <button class="filter-btn" data-filter="mobile">Mobile</button>
-            </div>
             <div class="projects-grid">
-                <div class="project-card" data-category="frontend">
+                <div class="project-card">
                     <div class="project-image">
                         <img src="https://via.placeholder.com/600x400" alt="Proyecto 1">
                         <div class="project-links">
@@ -245,7 +315,8 @@ fetch('mailto:tu@email.com', {
                     </div>
                     <div class="project-info">
                         <h3 class="project-title">E-commerce Platform</h3>
-                        <p class="project-description">Plataforma de comercio electrónico completa con carrito de compras, autenticación de usuarios y pasarela de pago.</p>
+                        <p class="project-description">Plataforma de comercio electrónico completa con carrito de
+                            compras, autenticación de usuarios y pasarela de pago.</p>
                         <div class="project-tech">
                             <span>React</span>
                             <span>Node.js</span>
@@ -258,75 +329,102 @@ fetch('mailto:tu@email.com', {
                         </a>
                     </div>
                 </div>
-                <!-- Más proyectos... -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400" alt="Proyecto 2">
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">E-commerce Platform</h3>
+                        <p class="project-description">Plataforma de comercio electrónico completa con carrito de
+                            compras, autenticación de usuarios y pasarela de pago.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>Stripe API</span>
+                        </div>
+                        <a href="./html/project-details.html?id=2" class="btn btn-outline project-more-btn">
+                            Ver más detalles
+                            <span class="hover-effect"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400" alt="Proyecto 3">
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Social Network API</h3>
+                        <p class="project-description">API RESTful para red social con autenticación JWT, relaciones de
+                            usuarios y sistema de publicaciones.</p>
+                        <div class="project-tech">
+                            <span>Express</span>
+                            <span>MongoDB</span>
+                            <span>JWT</span>
+                            <span>Socket.io</span>
+                        </div>
+                        <a href="./html/project-details.html?id=3" class="btn btn-outline project-more-btn">
+                            Ver más detalles
+                            <span class="hover-effect"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400" alt="Proyecto 1">
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">E-commerce Platform</h3>
+                        <p class="project-description">Plataforma de comercio electrónico completa con carrito de
+                            compras, autenticación de usuarios y pasarela de pago.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>Stripe API</span>
+                        </div>
+                        <a href="./html/project-details.html?id=4" class="btn btn-outline project-more-btn">
+                            Ver más detalles
+                            <span class="hover-effect"></span>
+                        </a>
+                    </div>
+                </div>
             </div>
             <div class="projects-more">
                 <button id="load-more-projects" class="btn btn-outline">
-                    Ver más proyectos 
+                    Ver más proyectos
                     <i class="fas fa-arrow-down"></i>
                     <span class="hover-effect"></span>
                 </button>
             </div>
         </section>
 
-        <section id="stats" class="section stats">
-            <div class="section-header">
-                <h2><span class="section-number">04</span> Logros</h2>
-                <div class="section-line"></div>
-            </div>
-            <div class="stats-container">
-                <div class="stat-item">
-                    <div class="stat-number" data-count="50">0</div>
-                    <div class="stat-label">Proyectos Completados</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-count="95">0</div>
-                    <div class="stat-label">Clientes Satisfechos</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-count="10000">0</div>
-                    <div class="stat-label">Líneas de Código</div>
-                </div>
-            </div>
-        </section>
-
-        <section id="interests" class="section">
-            <div class="section-header">
-                <h2><span class="section-number">05</span> Intereses</h2>
-                <div class="section-line"></div>
-            </div>
-            <div class="interests-grid">
-                <div class="interest-card">
-                    <i class="fas fa-code"></i>
-                    <h3>Tecnologías Emergentes</h3>
-                    <p>Explorando constantemente nuevas herramientas y frameworks</p>
-                </div>
-                <div class="interest-card">
-                    <i class="fas fa-music"></i>
-                    <h3>Música</h3>
-                    <p>Productor amateur y entusiasta de sintetizadores</p>
-                </div>
-                <div class="interest-card">
-                    <i class="fas fa-plane"></i>
-                    <h3>Viajes</h3>
-                    <p>Descubriendo nuevas culturas e inspirándome en el mundo</p>
-                </div>
-            </div>
-        </section>
-
         <section id="contact" class="section contact">
             <div class="section-header">
-                <h2><span class="section-number">06</span> Contacto</h2>
+                <h2><span class="section-number">04</span> Contacto</h2>
                 <div class="section-line"></div>
             </div>
             <div class="contact-content">
                 <div class="contact-info">
                     <h3 class="contact-title">¿Listo para comenzar tu proyecto?</h3>
-                    <p class="contact-text">Estoy disponible para oportunidades freelance y colaboraciones. Contáctame y hablemos sobre cómo puedo ayudarte a hacer realidad tu idea.</p>
+                    <p class="contact-text">Estoy disponible para oportunidades freelance y colaboraciones. Contáctame y
+                        hablemos sobre cómo puedo ayudarte a hacer realidad tu idea.</p>
                     <div class="contact-details">
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
-                            <span>alberto.martinmorin.job@gmail.com</span>
+                            <span>alberto.martinmorin.job@gmail.com </span>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-phone-alt"></i>
@@ -339,27 +437,30 @@ fetch('mailto:tu@email.com', {
                     </div>
                     <div class="contact-social">
                         <a href="https://github.com/Alberto02003" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/alberto-martin-morin-b5aa7830a/" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.linkedin.com/in/alberto-martin-morin-b5aa7830a/" class="social-link"><i
+                                class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                <form class="contact-form">
+                <form name="contact" method="POST" data-netlify="true" class="contact-form">
+                    <input type="hidden" name="form-name" value="contact">
+
                     <div class="form-group">
-                        <input type="text" id="name" required>
+                        <input type="text" id="name" name="name" required>
                         <label for="name">Nombre</label>
                         <div class="form-line"></div>
                     </div>
                     <div class="form-group">
-                        <input type="email" id="email" required>
+                        <input type="email" id="email" name="email" required>
                         <label for="email">Email</label>
                         <div class="form-line"></div>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="subject" required>
+                        <input type="text" id="subject" name="subject" required>
                         <label for="subject">Asunto</label>
                         <div class="form-line"></div>
                     </div>
                     <div class="form-group">
-                        <textarea id="message" rows="4" required></textarea>
+                        <textarea id="message" name="message" rows="4" required></textarea>
                         <label for="message">Mensaje</label>
                         <div class="form-line"></div>
                     </div>
@@ -385,6 +486,7 @@ fetch('mailto:tu@email.com', {
                 <a href="#skills">Habilidades</a>
                 <a href="#projects">Proyectos</a>
                 <a href="#contact">Contacto</a>
+                <a href="#experience">Experiencia</a>
             </div>
             <div class="footer-copy">
                 <p>&copy; <span id="year"></span> Todos los derechos reservados</p>
@@ -392,8 +494,7 @@ fetch('mailto:tu@email.com', {
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>
