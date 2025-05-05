@@ -181,4 +181,21 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    // Control del zoom del PDF para móviles
+    const pdfViewer = document.getElementById('pdf-viewer');
+    
+    if (pdfViewer) {
+        function adjustPDFZoom() {
+            if (window.innerWidth <= 768) { // Tamaño para móviles
+                pdfViewer.src = "../cv.pdf#toolbar=0&zoom=auto";
+            } else {
+                pdfViewer.src = "../cv.pdf#toolbar=0&zoom=100";
+            }
+        }
+        
+        // Ajustar al cargar y al cambiar tamaño
+        adjustPDFZoom();
+        window.addEventListener('resize', adjustPDFZoom);
+    }
 });
