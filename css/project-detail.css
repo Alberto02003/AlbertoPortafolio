@@ -102,14 +102,44 @@
     color: var(--accent-blue);
 }
 
+.project-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem auto 0;
+    width: calc(100% - 4rem);
+    max-width: calc(1200px - 4rem);
+}
+
+/* Existing back-projects styles (update if needed) */
 .back-projects {
+    width: 100%;
     display: flex;
     justify-content: center;
-    padding-bottom: 20px;
-    margin: 2rem auto 0;
-    width: calc(100% - 4rem); /* Igual que el padding de project-detail */
-    max-width: calc(1200px - 4rem); /* Igual que el max-width de project-detail */
 }
+
+/* New video button styles */
+.video-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .project-buttons {
+        width: calc(100% - 2rem);
+    }
+    
+    .btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+}
+
 
 @media (max-width: 768px) {
     .back-projects {

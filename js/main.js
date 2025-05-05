@@ -124,34 +124,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Datos de proyectos adicionales
     const moreProjects = [
-        {
-            id: 5,
-            title: "Weather Dashboard",
-            description: "Aplicación meteorológica con pronósticos en tiempo real.",
-            tech: ["React", "API", "Chart.js"],
-            image: "https://via.placeholder.com/600x400"
-        },
-        {
-            id: 6,
-            title: "Recipe Finder",
-            description: "Buscador de recetas con filtros avanzados.",
-            tech: ["Vue.js", "Firebase"],
-            image: "https://via.placeholder.com/600x400"
-        },
-        {
-            id: 7,
-            title: "Task Manager",
-            description: "Gestor de tareas con arrastrar y soltar.",
-            tech: ["React", "DnD", "Firebase"],
-            image: "https://via.placeholder.com/600x400"
-        },
-        {
-            id: 8,
-            title: "Blog Platform",
-            description: "Plataforma de blogs con markdown.",
-            tech: ["Next.js", "Markdown", "MongoDB"],
-            image: "https://via.placeholder.com/600x400"
-        }
+       
     ];
 
     if (loadMoreBtn && projectsGrid) {

@@ -815,9 +815,11 @@ body {
 /* Projects section */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    justify-content: start; /* Alinea el grid completo a la izquierda */
     gap: 1.5rem;
     margin-bottom: 3rem;
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
 }
 
 .project-card {

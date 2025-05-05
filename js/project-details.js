@@ -1,96 +1,26 @@
  // Datos completos de los proyectos
  const projects = {
     '1': {
-        title: "E-commerce Platform",
-        subtitle: "Plataforma de comercio electrónico completa",
-        description: "Desarrollo de una plataforma de e-commerce con todas las funcionalidades necesarias para una tienda online moderna.",
+        title: "Emulacion de Tuenti en Jetpack Compose",
+        subtitle: "Plataforma de Red social con aspectos detallados.",
+        description: "Desarrollo de una plataforma de red social con funcionalidades necesarias para una comportamiento basico.",
         longDescription: `
-            <p>Este proyecto consistió en el desarrollo completo de una plataforma de comercio electrónico desde cero. La aplicación permite a los usuarios:</p>
+            <p>Este proyecto consistió en el desarrollo completo de una red social desde cero. La aplicación permite a los usuarios:</p>
             <ul>
                 <li>Registrarse y autenticarse de forma segura</li>
-                <li>Explorar productos organizados por categorías</li>
-                <li>Buscar productos con filtros avanzados</li>
-                <li>Gestionar un carrito de compras persistente</li>
-                <li>Realizar pagos a través de Stripe</li>
-                <li>Seguir el estado de sus pedidos</li>
-            </ul>
-            <p>Para los administradores, incluye un completo panel de control con:</p>
-            <ul>
-                <li>Gestión de productos y categorías</li>
-                <li>Visualización de estadísticas de ventas</li>
-                <li>Gestión de usuarios y permisos</li>
-                <li>Sistema de cupones y descuentos</li>
+                <li>Explorar publicacion en menu principal</li>
+                <li>Buscar usuarios</li>
+                <li>gestion de configuracion completa</li>
+                <li>Realizar publicaciones y comentarios en las mismas</li>
+                <li>Ver perfiles en tiempo real</li>
             </ul>
         `,
-        challenges: "Los principales desafíos técnicos incluyeron la implementación del carrito de compras persistente (que mantiene los items incluso después de cerrar sesión), la integración segura con la API de Stripe, y la optimización del rendimiento para manejar grandes catálogos de productos.",
-        tech: ["React", "Node.js", "Express", "MongoDB", "Redux", "Stripe API"],
-        demoLink: "#",
-        codeLink: "#",
-        image: "https://via.placeholder.com/1200x600/0a192f/64ffda?text=E-commerce+Platform"
+        challenges: "Los principales desafíos técnicos incluyeron la implementación del los comentarios en las puvlicaciones, la integración segura con Firebase, y la optimización del rendimiento para manejar errores.",
+        tech: ["Kotlin", "Jetpack Compose"],
+        demoLink: "../html/video.html",
+        codeLink: "https://github.com/Alberto02003/Tutuenti",
+        image: "../assets/images/TuTuenti.jpg"
     },
-    '2': {
-        title: "Social Network API",
-        subtitle: "API RESTful para red social",
-        description: "Desarrollo de una API completa para una red social con funcionalidades como publicaciones, comentarios, relaciones entre usuarios y mensajería.",
-        longDescription: `
-            <p>API completa para una red social que incluye:</p>
-            <ul>
-                <li>Sistema de autenticación con JWT</li>
-                <li>CRUD completo para publicaciones y comentarios</li>
-                <li>Sistema de relaciones entre usuarios (seguidores/seguidos)</li>
-                <li>Mensajería en tiempo real usando WebSockets</li>
-                <li>Sistema de notificaciones</li>
-                <li>Documentación automática con Swagger</li>
-            </ul>
-        `,
-        challenges: "Los mayores retos fueron implementar el sistema de notificaciones en tiempo real que escala bien con muchos usuarios concurrentes, y optimizar las consultas para el feed de publicaciones que muestra contenido relevante para cada usuario.",
-        tech: ["Node.js", "Express", "MongoDB", "Socket.io", "JWT", "Redis"],
-        demoLink: "#",
-        codeLink: "#",
-        image: "https://via.placeholder.com/1200x600/172a45/64ffda?text=Social+Network+API"
-    },
-    '3': {
-        title: "Task Management App",
-        subtitle: "Aplicación de gestión de tareas",
-        description: "Aplicación web para gestión de tareas personales y en equipo con tableros Kanban y sistema de prioridades.",
-        longDescription: `
-            <p>Aplicación de productividad que permite:</p>
-            <ul>
-                <li>Creación de tableros Kanban personalizables</li>
-                <li>Vista de calendario integrada</li>
-                <li>Sistema de etiquetas y prioridades</li>
-                <li>Colaboración en tiempo real entre equipo</li>
-                <li>Gráficos de progreso y productividad</li>
-                <li>Exportación de reportes en PDF/CSV</li>
-            </ul>
-        `,
-        challenges: "Implementar la colaboración en tiempo real requirió solucionar problemas de concurrencia cuando múltiples usuarios editaban el mismo tablero. También fue un reto hacer que la aplicación fuera completamente responsiva manteniendo todas las funcionalidades.",
-        tech: ["Vue.js", "Firebase", "Quasar", "Vuex"],
-        demoLink: "#",
-        codeLink: "#",
-        image: "https://via.placeholder.com/1200x600/303f60/64ffda?text=Task+Management+App"
-    },
-    '4': {
-        title: "Health Tracking App",
-        subtitle: "Aplicación móvil de seguimiento de salud",
-        description: "Aplicación para registrar y monitorear métricas de salud como actividad física, nutrición y signos vitales.",
-        longDescription: `
-            <p>Aplicación móvil que permite:</p>
-            <ul>
-                <li>Registro de actividad física y nutrición</li>
-                <li>Sincronización con wearables (Apple Watch, Fitbit)</li>
-                <li>Visualización de datos con gráficos interactivos</li>
-                <li>Recordatorios inteligentes</li>
-                <li>Recomendaciones personalizadas basadas en los datos</li>
-                <li>Exportación de datos para compartir con médicos</li>
-            </ul>
-        `,
-        challenges: "La integración con diferentes wearables fue compleja debido a la variedad de APIs. También fue un reto procesar grandes volúmenes de datos en dispositivos móviles manteniendo un buen rendimiento y duración de batería.",
-        tech: ["Flutter", "Firebase", "BLoC", "Health Connect API"],
-        demoLink: "#",
-        codeLink: "#",
-        image: "https://via.placeholder.com/1200x600/0a192f/64ffda?text=Health+Tracking+App"
-    }
 };
 
 // Obtener el ID del proyecto de la URL
@@ -147,9 +77,9 @@ if (project) {
                 
                 <div class="project-section">
                     <h3>Detalles Técnicos</h3>
-                    <p><strong>Arquitectura:</strong> ${project.tech.includes('Node.js') ? 'Backend con Node.js y Express' : 'Aplicación móvil con Flutter'}</p>
+                    <p><strong>Arquitectura:</strong> ${project.tech.includes('Kotlin') ? 'Backend con Kotlin' : 'Aplicación móvil con Flutter'}</p>
                     <p><strong>Base de datos:</strong> ${project.tech.includes('MongoDB') ? 'MongoDB (NoSQL)' : 'Firebase Realtime Database'}</p>
-                    <p><strong>Estado:</strong> Completado y en producción</p>
+                    <p><strong>Estado:</strong> Completado </p>
                 </div>
             </div>
         </div>
