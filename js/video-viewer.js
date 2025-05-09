@@ -3,12 +3,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const projectVideos = [
         {
             id: 1,
-            title: "E-commerce Platform",
-            description: "Demostración de la plataforma de comercio electrónico con todas sus funcionalidades principales.",
+            title: "Emulacion de Tuenti en Jetpack Compose",
+            description: "Plataforma de Red social con aspectos detallados.",
             videoUrl: "../assets/video/PruebaTuTuenti.mp4",
             thumbnail: "../assets/images/TuTuenti.jpg",
-            tech: ["React", "Node.js", "MongoDB", "Stripe"],
-            date: "2023-11-15"
+            tech: ["Kotlin", "Jetpack Compose"],
+            date: "2024-11-15"
         },
         
     ];
