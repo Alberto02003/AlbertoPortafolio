@@ -612,83 +612,6 @@ body {
     transform: translateY(-10px);
 }
 
-/* Experience section */
-.experience-timeline {
-    position: relative;
-    padding-left: 2rem;
-    margin-top: 2rem;
-}
-
-.experience-timeline::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 7px;
-    height: 100%;
-    width: 2px;
-    background-color: var(--accent-blue);
-}
-
-.timeline-item {
-    position: relative;
-    padding-bottom: 2.5rem;
-    padding-left: 2rem;
-}
-
-.timeline-item:last-child {
-    padding-bottom: 0;
-}
-
-.timeline-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -9px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: var(--accent-blue);
-    border: 3px solid var(--medium-blue);
-}
-
-.timeline-date {
-    color: var(--accent-blue);
-    font-weight: 500;
-    margin-bottom: 0.5rem;
-}
-
-.timeline-title {
-    font-size: 1.3rem;
-    color: var(--text-accent);
-    margin-bottom: 0.3rem;
-}
-
-.timeline-company {
-    color: var(--text-secondary);
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    font-weight: 500;
-}
-
-.timeline-description {
-    color: var(--text-secondary);
-    line-height: 1.6;
-    margin-bottom: 1rem;
-}
-
-.timeline-tech {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.8rem;
-}
-
-.timeline-tech span {
-    background-color: rgba(100, 255, 218, 0.1);
-    color: var(--accent-blue);
-    padding: 0.3rem 0.8rem;
-    border-radius: 4px;
-    font-size: 0.8rem;
-}
 
 /* Ajustar los números de sección */
 #skills .section-number { content: "03"; }
@@ -816,10 +739,10 @@ body {
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    justify-content: start; /* Alinea el grid completo a la izquierda */
+    justify-content: start; 
     gap: 1.5rem;
     margin-bottom: 3rem;
-    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    width: 100%; 
 }
 
 .project-card {
